@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <mat-icon>message</mat-icon>
+    <span>Canvas</span>
+    <div class=" ml-auto">
+        
+      
+        <button mat-icon-button [matBadge]="cartCount" matBadgeColor="warn">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      
+        <button mat-icon-button [matBadge]="notificationCount" matBadgeColor="warn">
+          <mat-icon>notifications</mat-icon>
+        </button>
+      
+        <button mat-icon-button [matBadge]="commentCount" matBadgeColor="warn">
+          <mat-icon>comment</mat-icon>
+        </button>
+        
+        <mat-icon>search</mat-icon>
+      
+        <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #profileMenu="matMenu">
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+    </div>
+   
+  </mat-toolbar>
+  
