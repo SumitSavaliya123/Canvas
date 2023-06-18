@@ -1,5 +1,17 @@
-mat-sidenav{ background-color:darkblue;}
+mat-sidenav{
+     background-color:rgb(2, 32, 40);
+     width: 200px;
+}
 mat-sidenav-container{
     height: 90vh;
     
 }
+
+mat-sidenav-content{
+    width: 100vw;
+    background: red;
+}
+
+
+  
+

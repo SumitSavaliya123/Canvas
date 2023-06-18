@@ -2,15 +2,21 @@
     <app-navbar></app-navbar>
 
   
-  <div class="container"> <!-- Main container -->
+  <!-- Main container -->
     <mat-sidenav-container> <!-- Sidebar and Content container -->
-      <mat-sidenav mode="side" opened class="w-1/5"> <!-- Sidebar -->
+      <mat-sidenav #sidebar mode="side" opened> <!-- Sidebar -->
         <app-sidebar></app-sidebar>
       </mat-sidenav>
       <mat-sidenav-content> <!-- Content area -->
+        <div class="content">
+          <div class="toolbar">
+            
+              <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+            
+          </div>
+        </div>
         <app-content></app-content>
       </mat-sidenav-content>
     </mat-sidenav-container>
-  </div>
-  
+   
 <router-outlet></router-outlet>

@@ -16,12 +16,14 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContentComponent } from './components/content/content.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+   
   ],
   imports: [
     BrowserModule,
