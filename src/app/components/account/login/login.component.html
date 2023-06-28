@@ -1,0 +1,72 @@
+<mat-grid-list cols="3" rowHeight="fit" style="height: 100%">
+  <mat-grid-tile colspan="2">
+    <app-carousel></app-carousel>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <form [formGroup]="loginForm" class="login_data">
+      <app-input
+        label="Email Address"
+        type="email"
+        placeholder="evan.donohue@gmail.com"
+        [required]="true"
+        formControlName="email"
+        [size]="10"
+        ngDefaultControl
+      >
+      </app-input>
+      <mat-error>{{
+        validationService.getError(loginForm, "email", ValidationMessages.Login)
+      }}</mat-error>
+      <br /><br />
+      <div class="password_container">
+        <app-input
+          label="Password"
+          [type]="hidePassword ? 'password' : 'text'"
+          placeholder="********"
+          [required]="false"
+          [size]="10"
+          formControlName="password"
+          ngDefaultControl
+        >
+        </app-input>
+        <button
+          class="hideButton"
+          mat-icon-button
+          matSuffix
+          (click)="togglePasswordVisibility()"
+        >
+          <mat-icon class="hideButton">{{
+            hidePassword ? "visibility_off" : "visibility"
+          }}</mat-icon>
+        </button>
+      </div>
+      <div>
+        <mat-error class="error"
+          >{{
+            validationService.getError(
+              loginForm,
+              "password",
+              ValidationMessages.Login
+            )
+          }}
+        </mat-error>
+      </div>
+      <br /><br />
+      <app-button
+        label="Login"
+        type="submit"
+        title="Login"
+        btnClass="loginButton"
+        (click)="login()"
+      ></app-button>
+      <mat-card-content class="lost_pass">
+        <a routerLink="lost-password">Lost your password?</a>
+      </mat-card-content>
+      <mat-card-content class="create_acc">
+        Don't have an account?
+        <a class="underline" routerLink="registration">Create an account</a>
+      </mat-card-content>
+      <mat-card-content class="privacy">Privacy Policy</mat-card-content>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>

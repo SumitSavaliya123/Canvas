@@ -1,0 +1,15 @@
+<mat-form-field appearance="outline" class="form-control">
+  <mat-label>{{ label }}</mat-label>
+  <mat-select
+    (selectionChange)="saveSelection($event)"
+    [placeholder]="placeholder"
+    name="selectedValue"
+    [required]="required"
+    [disabled]="disabled"
+    [value]="selectValue"
+  >
+    <mat-option *ngFor="let item of optionItems" value="{{ item.value }}">
+      {{ item.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

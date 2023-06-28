@@ -1,0 +1,33 @@
+// .inputField{
+//     width: 401px;
+//     margin-top: 1vh;
+//     height: 50px;
+//     border: 1px solid #d9d9d9;
+//     border-radius: 3px;
+// }
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField label {
+  margin-bottom: 5px;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
+.inputField label {
+  margin-bottom: 5px;
+}
+.inputField input {
+  padding: 14px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.searchField {
+  margin: 10px 0;
+  width: 200px;
+}

@@ -1,0 +1,23 @@
+.city-name {
+  margin-top: 30px;
+  margin-inline: 30px;
+}
+.inside-city-name {
+  width: 100%;
+}
+.btn {
+  display: flex;
+  justify-content: left;
+  margin: 10px;
+}
+.errorMessage {
+  font-weight: 300;
+  color: red;
+  margin-left: 30px;
+}
+.dropdown {
+  margin-inline: 30px;
+}
+.btnClass:hover {
+  background-color: green;
+}

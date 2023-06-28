@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="navbar" style="background-color: white">
+    <div class="btn-title">
+      <button mat-icon-button class="dashboardBtn" (click)="toggleSidebar()">
+        <mat-icon class="textOfBtn">dashboard</mat-icon>
+      </button>
+      <h1 class="title">Canvas</h1>
+    </div>
+    <div class="groupOfIcons">
+      <p class="adminPortal">Admin Portal</p>
+      <mat-icon class="icon">search</mat-icon>
+      <mat-icon matBadge="15" matBadgeColor="primary" class="icon"
+        >shopping_cart</mat-icon
+      >
+      <mat-icon matBadge="15" matBadgeColor="primary" class="icon"
+        >notifications</mat-icon
+      >
+      <!--thing to check it out in future -->
+      <!-- <app-badge-components class="icon">notification</app-badge-components> -->
+
+      <mat-icon matBadge="15" matBadgeColor="primary" class="icon"
+        >message</mat-icon
+      >
+      <mat-icon class="profile-icon" [matMenuTriggerFor]="profileMenu"
+        >account_circle</mat-icon
+      >
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item (click)="logoutRequest()">Logout</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

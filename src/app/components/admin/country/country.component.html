@@ -1,0 +1,52 @@
+<div>
+  <div class="admin-content-header">
+    <div class="admin-content-heading">
+      <span>Country</span>
+    </div>
+    <div class="admin-content-actions">
+      <app-button
+        [label]="'Add New Country'"
+        [iconName]="'add'"
+        [title]="'Add Country'"
+        (btnClick)="clickOnAddCountryButton()"
+      ></app-button>
+    </div>
+  </div>
+  <hr />
+  <div>
+    <div class="admin-content-searchbar">
+      <app-input
+        [placeholder]="'Search Here..'"
+        [value]="''"
+        [size]="10"
+        [name]="'searchBar'"
+        [ngClass]="'searchField'"
+        (onKeyup)="onKeyUp($event)"
+        [placeholder]="'Enter Search Keyword'"
+        [styles]="countrySerachInputField"
+        ngDefaultControl
+      ></app-input>
+    </div>
+  </div>
+  <div>
+    <app-table
+      [dataSource]="respondedList"
+      [displayedColumns]="columns"
+      [approveButton]="false"
+      [disapproveButton]="false"
+      (viewRowEvent)="viewCountryDetails($event)"
+      (deleteRowEvent)="deleteCountry($event)"
+      (editRowEvent)="clickOnEditCountryButton($event)"
+      (sort)="sortCountryDetails($event)"
+    >
+    </app-table>
+    <mat-paginator
+      #pagination
+      [length]="length"
+      [pageSize]="countryListRequest.pageSize"
+      [pageSizeOptions]="pageSizeOptions"
+      (page)="onChangePage($event)"
+    >
+    </mat-paginator>
+  </div>
+</div>

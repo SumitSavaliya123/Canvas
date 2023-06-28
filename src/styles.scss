@@ -1,5 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'tailwindcss/tailwind';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// common style for
+.icon {
+  margin-inline: 10px;
+  color: rgb(32, 32, 32);
+  cursor: pointer;
+}
+
+//-------Style for common control-------
+.form-control {
+  width: 100%;
+  margin-block: 10px;
+}
+
+// ----Admin Core Layout------
+.admin-content {
+  padding: 20px;
+}
+.admin-content-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-content-heading {
+  font-size: 25px;
+  font-weight: 500;
+}
+hr {
+  border: 1px solid;
+}
+.admin-content-searchbar {
+  width: 100%;
+}

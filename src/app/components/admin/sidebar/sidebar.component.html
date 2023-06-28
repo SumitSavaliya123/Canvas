@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <mat-nav-list class="contentOfSidebar">
+    <h3>DASHBOARD</h3>
+    <div
+      mat-list-item
+      class="side-list-item"
+      routerLink="/admin/country"
+      routerLinkActive="active-list-item"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mat-icon class="side-item-icon">public</mat-icon>
+      <div class="side-item-text">Country</div>
+    </div>
+    <div
+      mat-list-item
+      class="side-list-item"
+      routerLink="/admin/city"
+      routerLinkActive="active-list-item"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mat-icon class="side-item-icon">apartment</mat-icon>
+      <div class="side-item-text">City</div>
+    </div>
+  </mat-nav-list>
+</div>
