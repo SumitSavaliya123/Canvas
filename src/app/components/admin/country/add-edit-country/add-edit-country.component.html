@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="form">
+    <form [formGroup]="addEditForm">
+      <div class="country-name">
+        <app-input
+          [label]="countryLabel"
+          [type]="countryType"
+          [formControl]="name"
+          [placeholder]="countryPlaceholder"
+          [required]="countryRequired"
+          [styles]="countryStyles"
+          [size]="100"
+          ngDefaultControl
+        ></app-input>
+        <span
+          style="color: red"
+          *ngIf="
+            addEditForm.controls['name'].hasError('required') &&
+            addEditForm.controls['name'].touched
+          "
+          >Country name is required</span
+        >
+      </div>
+    </form>
+    <div class="dropdown">
+      <app-drop-down
+        [label]="addEditCountryLabel"
+        [placeholder]="addEditCountryPlaceholder"
+        [required]="addEditCountryRequired"
+        [disabled]="addEditCountryDisabled"
+        [optionItems]="addEditCountryOptionsItem"
+        (selectionChange)="selectedStatusValue($event)"
+        [selectValue]="dropdownSelectedValue"
+      ></app-drop-down>
+    </div>
+    <div class="btn">
+      <app-button
+        [disabled]="disabledAddEditButton"
+        [styles]="addEditButtonStyle"
+        [label]="addEditButtonLabel"
+        (btnClick)="AddOrEdit()"
+      >
+      </app-button>
+      <app-button
+        [disabled]="disabledAddEditButton"
+        [styles]="addEditButtonStyleForCancel"
+        [label]="addEditButtonLabelForCancel"
+        (btnClick)="clickedOnCancelButton()"
+        [btnClass]="cancelButtonClass"
+      >
+      </app-button>
+    </div>
+  </div>
+</div>

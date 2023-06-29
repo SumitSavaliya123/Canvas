@@ -1,0 +1,31 @@
+$bgcolor: #091C2C;
+.sidebar{
+    width: 18vw;
+    background-color:  #091C2C;
+    height: 87vh;
+}
+.contentOfSidebar{
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+    height: 80vh;
+}
+.side-list-item{
+    /* margin-bottom: 10px;
+    margin-top: 5px; */
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 10px;
+    cursor: pointer;
+    margin-block: 5px;
+}
+.side-item-text{
+    margin-inline: 10px;
+}
+.side-list-item:hover, .active-list-item{
+    background-color:  #11304B;
+    color: white;
+}
+
+

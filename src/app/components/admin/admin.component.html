@@ -1,0 +1,15 @@
+<app-header
+  (sidebar)="adminSidebar($event)"
+  (logout)="adminLogout()"
+></app-header>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [opened]="openCloseSidebar">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content class="admin-content">
+    <div style="height: 87vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>

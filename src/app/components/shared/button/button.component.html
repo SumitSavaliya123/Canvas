@@ -1,0 +1,13 @@
+<button
+  mat-raised-button
+  class="btn-class"
+  type="{{ type }}"
+  disabled="{{ disabled }}"
+  [ngClass]="btnClass"
+  [title]="title"
+  (click)="handleClick()"
+  [ngStyle]="styles"
+  [class]="className"
+>
+  {{ label }}
+</button>

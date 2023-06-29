@@ -1,0 +1,21 @@
+<div class="inputField">
+  <label>{{ label }}</label>
+  <input
+    matInput
+    #input
+    type="{{ type }}"
+    [formControl]="formControl"
+    [placeholder]="placeholder"
+    [value]="value"
+    [required]="required"
+    [pattern]="pattern"
+    [readonly]="readonly"
+    [size]="size"
+    [class]="ngClass"
+    [maxlength]="maxlength"
+    [minlength]="minlength"
+    [name]="name"
+    [style]="styles"
+    (keyup)="onKeyUp(input.value)"
+  />
+</div>

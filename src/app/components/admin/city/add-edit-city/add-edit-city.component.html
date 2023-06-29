@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="form">
+    <form [formGroup]="addEditCityForm">
+      <div class="city-name">
+        <!-- <mat-form-field class="inside-city-name">
+          <mat-label>City Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter City Name"
+            formControlName="name"
+          />
+        </mat-form-field> -->
+        <app-input
+          [label]="cityLabel"
+          [type]="cityType"
+          [formControl]="name"
+          [placeholder]="cityPlaceholder"
+          [required]="cityRequired"
+          [styles]="cityStyles"
+          [size]="100"
+          ngDefaultControl
+        ></app-input>
+        <span
+          class="errorMessage"
+          *ngIf="
+              this.addEditCityForm.controls['name'].touched &&
+              this.addEditCityForm.controls['name'].errors?.['required']
+            "
+          >Please Enter Country Name!</span
+        >
+      </div>
+    </form>
+    <div class="dropdown">
+      <app-drop-down
+        [label]="addEditCityLabel"
+        [placeholder]="addEditCityPlaceholder"
+        [required]="addEditCityRequired"
+        [disabled]="addEditCityDisabled"
+        [optionItems]="addEditCityOptionsItem"
+        (onChange)="selectedStatusValue($event)"
+        [selectValue]="dropdownSelectedValue"
+      ></app-drop-down>
+    </div>
+    <div class="btn">
+      <app-button
+        [disabled]="disabledAddEditButton"
+        [styles]="addEditButtonStyle"
+        [label]="addEditButtonLabel"
+        (btnClick)="AddOrEdit()"
+      >
+      </app-button>
+      <app-button
+        [disabled]="disabledAddEditButton"
+        [styles]="addEditButtonStyleForCancel"
+        [label]="addEditButtonLabelForCancel"
+        (btnClick)="clickedOnCancelButton()"
+        [btnClass]="cancelButtonClass"
+      >
+      </app-button>
+    </div>
+  </div>
+</div>

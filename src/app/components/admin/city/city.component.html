@@ -1,0 +1,64 @@
+<!-- <div class="btn">
+  <a mat-button class="example-button" routerLink="/admin/city/addcity"
+    >+ Add New City</a
+  >
+</div>
+<div class="btn">
+  <a mat-button class="example-button" routerLink="/admin/city/editcity/2"
+    >+ Edit City</a
+  >
+</div> -->
+
+<div>
+  <div class="admin-content-header">
+    <div class="admin-content-heading">
+      <span>Country</span>
+    </div>
+    <div class="admin-content-actions">
+      <app-button
+        [label]="'Add New Country'"
+        [iconName]="'add'"
+        [title]="'Add Country'"
+        (btnClick)="clickOnAddCityButton()"
+      ></app-button>
+    </div>
+  </div>
+  <hr />
+  <div>
+    <div class="admin-content-searchbar">
+      <app-input
+        [placeholder]="'Search Here..'"
+        [value]="''"
+        [size]="10"
+        [name]="'searchBar'"
+        [ngClass]="'searchField'"
+        (onKeyup)="onKeyUp($event)"
+        [placeholder]="'Enter Search Keyword'"
+        [styles]="citySerachInputField"
+        ngDefaultControl
+      ></app-input>
+    </div>
+  </div>
+  <div>
+    <app-table
+      [dataSource]="respondedList"
+      [displayedColumns]="columns"
+      [approveButton]="false"
+      [disapproveButton]="false"
+      (viewRowEvent)="viewCityDetails($event)"
+      (deleteRowEvent)="deleteCity($event)"
+      (editRowEvent)="clickOnEditCityButton($event)"
+      (sort)="sortCityDetails($event)"
+    >
+    </app-table>
+    <mat-paginator
+      #pagination
+      [length]="length"
+      [pageSize]="cityListRequest.pageSize"
+      [pageSizeOptions]="pageSizeOptions"
+      (page)="onChangePage($event)"
+    >
+    </mat-paginator>
+  </div>
+</div>
+
