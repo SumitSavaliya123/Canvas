@@ -7,6 +7,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Comp1Component } from './comp1/comp1.component';
 
 const components = [
   LoginComponent,
@@ -16,7 +17,7 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...components, Comp1Component],
   imports: [
     CommonModule,
     AccountRoutingModule,
